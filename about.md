@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About
-tagline: A few more words about this theme
+title: $whoami
+tagline: A few more words about this blog
 permalink: /about.html
 ---
 

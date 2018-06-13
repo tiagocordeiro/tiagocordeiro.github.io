@@ -1,5 +1,9 @@
-Usando o Cloudinary como alternativa ao S3 da AWS
-=================================================
+---
+layout: post
+title:  "Usando o Cloudinary como alternativa ao S3 da AWS"
+date:   2015-11-17 16:16:01 -0600
+categories: Propostas de palestras
+---
 
 Aprenda a criar um projeto em Django rodando na Heroku e integrado com o Cloudinary.
 

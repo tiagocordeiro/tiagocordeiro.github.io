@@ -1,6 +1,6 @@
 ---
 layout: page
-title: $whoami
+title: $ whoami
 tagline: A few more words about this blog
 permalink: /about.html
 ---

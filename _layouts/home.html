@@ -21,7 +21,7 @@ layout: default
           <a class="post-link" href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
         </h2>
         {% for category in post.categories %}
-          <i class="tag">{{category}}</i>
+          <span class="tag"><a href="/category/{{ category }}">#{{ category }}</a></span>
         {% endfor %}
 
         <span>{{ post.excerpt | markdownify | truncatewords: 30 }}</span>

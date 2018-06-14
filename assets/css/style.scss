@@ -59,3 +59,8 @@ color: white;
 .tag:hover::after {
     border-left-color: #159957; 
 }
+
+.tag a:hover {
+    background-color: #159957;
+    color: white;
+}

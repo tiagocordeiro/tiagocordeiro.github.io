@@ -52,10 +52,10 @@ top: 0;
 }
 
 .tag:hover {
-background-color: crimson;
+background-color: #159957;
 color: white;
 }
 
 .tag:hover::after {
-    border-left-color: crimson; 
+    border-left-color: #159957; 
 }

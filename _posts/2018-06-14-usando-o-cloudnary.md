@@ -5,19 +5,48 @@ date:   2018-06-14 05:00:01 -0300
 category: Tutorial
 ---
 
-Aprenda a criar um projeto em Django rodando na Heroku e integrado com o Cloudinary.
+```
+$ python3 -m venv venv
+$ source venv/bin/activate
+$ pip install --upgrade pip
 
-Gerenciar arquivos / imagens pode ser um aborrecimento. Pode ser muito difícil ter que lidar com uploads, armazenamento, manipulação, administração e entrega de conteúdo de mídia em todos os projetos em que você começa ou está envolvido.
+$ pip install django
+$ django-admin startproject [meu-projeto] . 
 
-Felizmente, existem plataformas na nuvem que tiram o estresse de tudo isso, permitindo que você envie mais rapidamente e entregue seus produtos em grande escala. Cloudinary é uma dessas plataformas. Ele se identifica como a plataforma de gerenciamento de mídia para desenvolvedores Web - uma solução de ponta a ponta para todas as suas necessidades de imagem e vídeo.
+$ python manage.py migrate
+$ python manage.py createsuperuser
+$ python manage.py runserver
 
-### Alguns recursos e ultilizações.
-* Servir arquivos estáticos (imagens, CSS, JS)
-* Armazenar arquivos de mídias (imagens, vídeos, pdf... enviados pelos usuários)
-* Manipulação de imagens (Muito além de crop e resize. Reconhecimento facial, OCR..)
+{Análise dos arquivos estáticos }
 
-Além da API fácil de usar da Cloudinary, o seu plano gratuito é bastante generoso.
+[Mostrar aviso migração]
+$ python manage.py migrate
 
-Duração: de 30 a 45 minutos
+[Cloudinary]
+$ pip install django-cloudinary-storage
 
-Público-alvo: Qualquer pessoa com conhecimento básico de Python e Django
+# Settings.py 
+INSTALLED_APPS = [
+    # ...
+    'cloudinary_storage',
+    'django.contrib.staticfiles',
+    'cloudinary',
+    # ...
+]
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'hj7j3bfel',
+    'API_KEY': '762422337134644',
+    'API_SECRET': '0kYk1XmvaStLq93O1QAmZMMvuIM'
+}
+
+STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+
+MEDIA_URL = '/media/'  # or any prefix you choose
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+DEBUG=False
+ALLOWED_HOSTS = ['*']
+$ python manage.py collectstatic
+```

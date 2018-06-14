@@ -5,27 +5,33 @@ date:   2018-06-14 05:00:01 -0300
 category: Tutorial
 ---
 
+### Ambiente Virtual
 ```
 $ python3 -m venv venv
 $ source venv/bin/activate
 $ pip install --upgrade pip
+```
 
+### Instalando o Django
+```
 $ pip install django
-$ django-admin startproject [meu-projeto] . 
+```
 
+### Criando o projeto
+```
+$ django-admin startproject [meu-projeto] . 
 $ python manage.py migrate
 $ python manage.py createsuperuser
 $ python manage.py runserver
-
+```
 {Análise dos arquivos estáticos }
 
-[Mostrar aviso migração]
-$ python manage.py migrate
-
-[Cloudinary]
+### Instalando o Cloudinary
+```
 $ pip install django-cloudinary-storage
-
-# Settings.py 
+```
+#### Settings.py 
+```
 INSTALLED_APPS = [
     # ...
     'cloudinary_storage',

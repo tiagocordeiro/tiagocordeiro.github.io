@@ -44,9 +44,9 @@ INSTALLED_APPS = [
 ]
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'hj7j3bfel',
-    'API_KEY': '762422337134644',
-    'API_SECRET': '0kYk1XmvaStLq93O1QAmZMMvuIM'
+    'CLOUD_NAME': 'cloud_name',
+    'API_KEY': 'api_key',
+    'API_SECRET': 'api_secret'
 }
 
 STATIC_URL = '/static/'

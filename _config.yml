@@ -1,6 +1,6 @@
 title: ferraSnippets
 description: Codigos ferrados ;)
-show_downloads: true
+show_downloads: false
 
 baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
 url: "https://tiagocordeiro.github.io" # change this to the base hostname & protocol for your site

@@ -20,7 +20,7 @@ layout: default
         <h2>
           <a class="post-link" href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
         </h2>
-        <p>{{ page.categories | join: ', ' }}</p>
+        <p>{{ post.categories | join: ', ' }}</p>
 
         <span>{{ post.excerpt | markdownify | truncatewords: 30 }}</span>
 

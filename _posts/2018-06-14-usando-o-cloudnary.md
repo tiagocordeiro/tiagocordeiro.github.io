@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[tutorial] Usando o Cloudinary como alternativa ao S3 da AWS"
+title:  "Usando o Cloudinary como alternativa ao S3 da AWS"
 date:   2018-06-14 05:00:01 -0300
 category: Tutorial
 ---
@@ -54,5 +54,10 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 DEBUG=False
 ALLOWED_HOSTS = ['*']
-$ python manage.py collectstatic
 ```
+
+```
+$ python manage.py collectstatic
+$ python manage.py runserver
+```
+{Análise dos arquivos estáticos }

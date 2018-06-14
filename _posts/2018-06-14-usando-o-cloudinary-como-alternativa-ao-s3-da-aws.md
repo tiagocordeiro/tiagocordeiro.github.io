@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Usando o Cloudinary como alternativa ao S3 da AWS"
+title:  "[Tutorial] Usando o Cloudinary como alternativa ao S3 da AWS"
 date:   2018-06-14 05:00:01 -0300
 categories: 
     - "tutorial"

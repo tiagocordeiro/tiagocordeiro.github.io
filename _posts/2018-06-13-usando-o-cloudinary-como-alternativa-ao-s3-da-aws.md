@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Usando o Cloudinary como alternativa ao S3 da AWS"
+title:  "[Proposta de palestra] Usando o Cloudinary como alternativa ao S3 da AWS"
 date:   2018-06-13 05:00:01 -0300
 categories: 
     - "propostas_de_palestras"

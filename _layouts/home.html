@@ -21,6 +21,9 @@ layout: default
           <a class="post-link" href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
         </h2>
         <h3>{{ post.categories | join: ', ' }}</h3>
+        {% for category in post.categories %}
+          <a href="#" class="tag">{{category}}</a>
+        {% endfor %}
 
         <span>{{ post.excerpt | markdownify | truncatewords: 30 }}</span>
 

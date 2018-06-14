@@ -3,8 +3,16 @@ layout: default
 ---
 <article itemscope itemtype="http://schema.org/BlogPosting">
 
-  <!-- <header class="post-header">
+  <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <div class="tags">
+      {% assign sortedCategories = page.categories | sort %}
+      {% for category in sortedCategories %}
+          <span class="tag">
+              <a href="/category/{{ category }}">#{{ category }}</a>
+          </span>
+      {% endfor %}
+    </div>
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {% assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" %}
@@ -13,11 +21,28 @@ layout: default
       {% if page.author %}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
       {% endif %}</p>
-  </header> -->
+  </header>
 
   <div itemprop="articleBody">
     {{ content }}
   </div>
+
+  <div class="related">
+    <h3>Artigos relacionados</h3>
+    {% assign firstCategory = page.categories | first %}
+    {% assign relatedCount = 0 %}
+    {% for related in site.categories[firstCategory] %}
+        {% unless page.permalink == related.permalink %}
+            {% assign relatedCount = relatedCount | plus: 1 %}
+            <a href="{{related.permalink}}">{{ related.title }}</a>
+        {% endunless %}
+
+        {% if relatedCount == 3 %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+  </div>
+
 
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}

@@ -6,7 +6,7 @@ categories:
     - "propostas_de_palestras"
 ---
 
-Aprenda a criar um projeto em Django rodando na Heroku e integrado com o Cloudinary.
+Aprenda a criar um projeto Django rodando na Heroku integrado com Cloudinary
 
 Gerenciar arquivos / imagens pode ser um aborrecimento. Pode ser muito difícil ter que lidar com uploads, armazenamento, manipulação, administração e entrega de conteúdo de mídia em todos os projetos em que você começa ou está envolvido.
 

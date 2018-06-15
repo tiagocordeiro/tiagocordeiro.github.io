@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "[Tutorial] Usando o Cloudinary como alternativa ao S3 da AWS"
-date:   2018-06-14 05:00:01 -0300
+title:  "Usando o Cloudinary como alternativa ao S3 da AWS"
+date:   2018-06-14 06:06:06 -0300
 categories: 
     - "tutorial"
     - "django"
@@ -18,29 +18,50 @@ categories:
 
 ```
 $ python3 -m venv venv
+```
+
+
+Ativando o ambiente virtual (upgrade pip)
+```
 $ source venv/bin/activate
-$ pip install --upgrade pip
+(venv) $ pip install --upgrade pip
 ```
 
-### Instalando o Django
+
+<br />
+> ### Instalando o Django
+
 ```
-$ pip install django
+(venv) $ pip install django
 ```
 
-### Criando o projeto
+
+<br />
+> ### Criando o projeto
+
 ```
-$ django-admin startproject [meu-projeto] . 
-$ python manage.py migrate
-$ python manage.py createsuperuser
-$ python manage.py runserver
+(venv) $ django-admin startproject [meu-projeto] . 
+(venv) $ python manage.py migrate
+(venv) $ python manage.py createsuperuser
+(venv) $ python manage.py runserver
 ```
+
+
 {Análise dos arquivos estáticos }
 
-### Instalando o Cloudinary
-```
-$ pip install django-cloudinary-storage
+
+<br />
+> ### Cloudinary
+
 ```
 #### Settings.py 
+(venv) $ pip install django-cloudinary-storage
+```
+
+
+<br />
+> ### Ajustando o settings.py
+
 ```python
 INSTALLED_APPS = [
     # ...
@@ -62,7 +83,7 @@ STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 MEDIA_URL = '/media/'  # or any prefix you choose
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-DEBUG=False
+DEBUG = False
 ALLOWED_HOSTS = ['*']
 ```
 

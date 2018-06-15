@@ -8,9 +8,7 @@ layout: default
     <div class="tags">
       {% assign sortedCategories = page.categories | sort %}
       {% for category in sortedCategories %}
-          <span class="tag">
-              <a href="/category/{{ category }}">#{{ category }}</a>
-          </span>
+        <a href="/category/{{ category }}"><span class="tag">#{{ category }}</span></a>
       {% endfor %}
     </div>
     <p class="post-meta">

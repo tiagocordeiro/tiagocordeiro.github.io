@@ -8,33 +8,74 @@ categories:
     - "cloudinary"
 ---
 
-### Ambiente Virtual
+
+> Aprenda a criar um projeto Django, rodando na Heroku e integrado com Cloudinary
+
+Gerenciar arquivos e imagens em produção pode ser um aborrecimento. Costuma ser bem difícil lidar com uploads, armazenamento, manipulação, administração e entrega de conteúdo de mídia em todos os projetos em que você começa ou está envolvido.
+
+Felizmente, existem plataformas na nuvem que tiram o estresse de tudo isso, permitindo que você envie mais rapidamente e entregue seus produtos em grande escala. Cloudinary é uma dessas plataformas.
+
+
+> #### recursos / aplicações
+----------------------------
++ Servir arquivos estáticos (imagens, CSS, JS)
++ Armazenar arquivos de mídias (imagens, vídeos, pdf... enviados pelos usuários)
++ Manipulação de imagens (Muito além de crop e resize. Reconhecimento facial, OCR..)
+
+
+Além da API fácil de usar da Cloudinary, o seu plano gratuito é bastante generoso.
+
+
+<br />
+> ### Ambdev
+
+Vamos criar um ambiente virtual...
 ```
 $ python3 -m venv venv
+```
+
+
+Ativando o ambiente virtual (upgrade pip)
+```
 $ source venv/bin/activate
-$ pip install --upgrade pip
+(venv) $ pip install --upgrade pip
 ```
 
-### Instalando o Django
+
+<br />
+> ### Instalando o Django
+
 ```
-$ pip install django
+(venv) $ pip install django
 ```
 
-### Criando o projeto
+
+<br />
+> ### Criando o projeto
+
 ```
-$ django-admin startproject [meu-projeto] . 
-$ python manage.py migrate
-$ python manage.py createsuperuser
-$ python manage.py runserver
+(venv) $ django-admin startproject [meu-projeto] . 
+(venv) $ python manage.py migrate
+(venv) $ python manage.py createsuperuser
+(venv) $ python manage.py runserver
 ```
+
+
 {Análise dos arquivos estáticos }
 
-### Instalando o Cloudinary
+
+<br />
+> ### Cloudinary
+
 ```
-$ pip install django-cloudinary-storage
+(venv) $ pip install django-cloudinary-storage
 ```
-#### Settings.py 
-```
+
+
+<br />
+> ### Ajustando o settings.py
+
+```python
 INSTALLED_APPS = [
     # ...
     'cloudinary_storage',
@@ -55,7 +96,7 @@ STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 MEDIA_URL = '/media/'  # or any prefix you choose
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-DEBUG=False
+DEBUG = False
 ALLOWED_HOSTS = ['*']
 ```
 

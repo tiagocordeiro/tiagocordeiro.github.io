@@ -8,14 +8,30 @@ categories:
     - "cloudinary"
 ---
 
-### Cloudinary
 
+> Aprenda a criar um projeto Django, rodando na Heroku e integrado com Cloudinary
 
+Gerenciar arquivos e imagens em produção pode ser um aborrecimento. Costuma ser bem difícil lidar com uploads, armazenamento, manipulação, administração e entrega de conteúdo de mídia em todos os projetos em que você começa ou está envolvido.
+
+Felizmente, existem plataformas na nuvem que tiram o estresse de tudo isso, permitindo que você envie mais rapidamente e entregue seus produtos em grande escala. Cloudinary é uma dessas plataformas.
 
 ![Planos Cloudinary](https://res.cloudinary.com/mulhergorila/image/upload/v1529013672/blog-images/cloudinary-plans.jpg){:class="img-responsive"}
 
-### Ambiente Virtual
 
+> #### recursos / aplicações
+----------------------------
++ Servir arquivos estáticos (imagens, CSS, JS)
++ Armazenar arquivos de mídias (imagens, vídeos, pdf... enviados pelos usuários)
++ Manipulação de imagens (Muito além de crop e resize. Reconhecimento facial, OCR..)
+
+
+Além da API fácil de usar da Cloudinary, o seu plano gratuito é bastante generoso.
+
+
+<br />
+> ### Ambdev
+
+Vamos criar um ambiente virtual...
 ```
 $ python3 -m venv venv
 ```
@@ -54,7 +70,6 @@ $ source venv/bin/activate
 > ### Cloudinary
 
 ```
-#### Settings.py 
 (venv) $ pip install django-cloudinary-storage
 ```
 

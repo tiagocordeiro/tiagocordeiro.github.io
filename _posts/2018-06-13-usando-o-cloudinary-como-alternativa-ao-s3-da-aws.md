@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "[Proposta de palestra] Usando o Cloudinary como alternativa ao S3 da AWS"
-date:   2018-06-13 05:00:01 -0300
+title:  "Usando o Cloudinary como alternativa ao S3 da AWS"
+date:   2018-06-13 06:06:06 -0300
 categories: 
     - "propostas_de_palestras"
 ---
 
-Aprenda a criar um projeto Django rodando na Heroku integrado com Cloudinary
+Aprenda a criar um projeto Django rodando na Heroku e integrado com Cloudinary
 
 Gerenciar arquivos / imagens pode ser um aborrecimento. Pode ser muito difícil ter que lidar com uploads, armazenamento, manipulação, administração e entrega de conteúdo de mídia em todos os projetos em que você começa ou está envolvido.
 

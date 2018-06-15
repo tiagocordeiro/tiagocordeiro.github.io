@@ -149,3 +149,4 @@ Por enquanto é isto. Em breve publicarei a segunda perte do tutorial `Preparand
 <br />
 > Referências
 [Django Cloudinary Storage](https://github.com/klis87/django-cloudinary-storage){:target="_blank"}
+[Integrando o Django com Cloudinary](http://pythonclub.com.br/integrando-django-com-cloudinary.html){:target="_blank"}

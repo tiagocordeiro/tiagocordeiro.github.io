@@ -15,7 +15,7 @@ theme: # leave it empty
 
 # social
 author: "Tiago ferrabras"
-#image: /thumbnail-jumbo.png
+image: assets/images/thumbnail-jumbo.png
 twitter:
   username: tiagoc79
 #  site:
@@ -37,3 +37,7 @@ defaults:
       type: category
     values:
       layout: "category"
+  - scope:
+      path: "assets/images"
+    values:
+      image: true

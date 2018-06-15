@@ -8,7 +8,14 @@ categories:
     - "cloudinary"
 ---
 
+### Cloudinary
+
+
+
+![Planos Cloudinary](https://res.cloudinary.com/mulhergorila/image/upload/v1529013672/blog-images/cloudinary-plans.jpg){:class="img-responsive"}
+
 ### Ambiente Virtual
+
 ```
 $ python3 -m venv venv
 $ source venv/bin/activate
@@ -34,7 +41,7 @@ $ python manage.py runserver
 $ pip install django-cloudinary-storage
 ```
 #### Settings.py 
-```
+```python
 INSTALLED_APPS = [
     # ...
     'cloudinary_storage',
